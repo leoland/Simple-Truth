@@ -1,0 +1,38 @@
+/* ==========================================================================
+ * LAYOUT
+ * Defining major layout dimensions
+ * ========================================================================== */
+
+$outerGutter: 4.53782%;
+
+$menuBreakpoint: 50em;
+
+/* ==========================================================================
+ * Layout
+ * Menu breaks at 50em
+ * Layout gets margin-left to accomodate
+ * ========================================================================== */
+
+body {
+  max-width: 100%;
+}
+
+#wrapper {
+  margin-top: 50px;
+}
+
+main {
+  margin: 0 $outerGutter $outerGutter * 2;
+  padding-top: 2em;
+}
+
+.page-header {
+	width: 100%;
+  overflow: hidden;
+  min-height: 260px;
+  .inner {
+    margin: 0 $outerGutter;
+   // max-width: 50.75em;
+    padding: 0 0 $outerGutter;
+  }
+}

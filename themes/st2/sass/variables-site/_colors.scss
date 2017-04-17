@@ -1,0 +1,248 @@
+/* ==========================================================================
+ * COLORS
+ * Defining brand colors 
+ * ========================================================================== */
+$color__lightgrey: #999FA3;
+$color__lilywhite: #F6F6F7;
+$color__bluegrey: #333f48;
+$color__blue: #003087;
+$color__teal: #2cd5c4;
+$color__lime: #c0df16;
+$color__cyan: #00b5e2;
+$color__yellow: #ffb81c;
+$color__orange: #ff8200;
+$color__purple: #5c068c;
+$color__magenta: #ad1aac;
+$color__red: #e4002b;
+$color__green: #78be20;
+
+/* ==========================================================================
+ * PAGE COLOR OVERRIDE
+ * Each page will use a brand color as the only color for that page.
+ * Those are applied below
+ * ========================================================================== */
+
+@mixin pageColor($color) {
+  $color__dark: darken($color, 5%);
+  #secondary .widget .widget-title a {
+    color: $color;
+  }
+  #secondary .widget .widget-title a:visited {
+    color: $color;
+  }
+  #secondary .widget .widget-title a:-webkit-any-link {
+    color: $color;
+    background: none;
+  }
+  /* header background colors */
+  .page-header,
+  #site-header,
+  .outro {
+    background-color: $color;
+  }
+  /* Text content elements */
+  h2,
+  h3 {
+    color: $color;
+  }
+  a {
+    border-color: $color;
+  }
+  blockquote {
+    border-color: transparentize($color, 0.6);
+  }
+  /* Button color */
+  button,
+  input[type=submit],
+  a.button {
+    border-color: $color;
+    &:hover,
+    &:focus {
+      background-color: $color;
+    }
+  }
+  /* Main logo color */
+  @media screen and (min-width: 50em) {
+    #site-header #logo svg * {
+      fill: $color !important;
+    }
+  }
+  /* Sidebar navigation */
+  #main-navigation #main-menu {
+    a {
+      &:hover {
+        color: $color;
+      }
+    }
+    .current_page_item,
+    .current-menu-item {
+      a {
+        color: $color;
+      }
+    }
+  }
+  //hover states acros multiple places.
+  .more-client:hover, .not-featured-client:hover, .featured-client:hover, .other-post:hover {
+    .client__intro, .not-featured-client__intro, .featured-client__intro, .other-post-inner h1 {
+      border-bottom: solid 1px $color;
+
+      transition: all 1s;
+    }
+    .shadow {
+    }
+    img {
+      z-index: -2;
+    }
+    .shadow::after {
+
+      transition: all 1s;
+
+      box-shadow: inset 0 0 0 3px $color;
+      opacity: .8;
+    }
+    .featured-client__image-container {
+      transition: all 1s;
+      box-shadow: inset 0 0 0 6px transparentize($color, .2);
+    }
+  }
+
+  /*Color changes to blog section*/
+
+  .post-title--wrapper {
+    background-color: transparentize($color, .1);
+  }
+  .blog__categories {
+    &:before, li:hover {
+      background-color: $color;
+    }
+  }
+  .blog__categories, .blog__categories ul {
+    background-color: $color__dark;
+  }
+
+  article:not(.latest-post):hover:before {
+    //  background-color: $color;
+  }
+  article:hover .post-wrapper .entry-title {
+
+    border-bottom: solid 1px $color;
+  }
+  .latest-post {
+    background-color: $color;
+    .post-wrapper {
+      @media screen and (max-width: 1139px) {
+        background-color: $color;
+      }
+
+      @media screen and (min-width: 800px) and (max-width: 1139px) {
+
+        background-color: transparentize($color, .1);
+      }
+    }
+  }
+  .entry-footer-inner h2.author-name a {
+    color: $color;
+  }
+  .other-posts {
+    h1, .other-post .article p, .other-post .client h1, .contact-cta a h1 {
+      color: $color;
+    }
+    a {
+      text-decoration: none;
+    }
+
+  }
+.feed-pagination {
+  background-color: $color;
+}
+}
+
+.page, .error404 {
+  @include pageColor($color__green);
+}
+
+.blue {
+  @include pageColor($color__blue);
+}
+
+.page-template-page_approach {
+  @include pageColor($color__teal);
+}
+
+.lime {
+  @include pageColor($color__lime);
+}
+
+.post-type-archive-clients,
+.tax-capability,
+.single-clients {
+  @include pageColor($color__cyan);
+}
+
+.yellow {
+  @include pageColor($color__yellow);
+}
+
+.orange {
+  @include pageColor($color__orange);
+}
+
+.single-post.purple,
+.blog,
+.post,
+.single-post,
+.category,
+.author {
+  @include pageColor($color__purple);
+}
+
+.magenta {
+  @include pageColor($color__magenta);
+}
+
+.page-template-page_people {
+  @include pageColor($color__red);
+}
+
+/*
+* Adding the color casses again to override color scheme via the colro picker
+*/
+.green {
+  @include pageColor($color__green);
+}
+
+.blue {
+  @include pageColor($color__blue);
+}
+
+.teal {
+  @include pageColor($color__teal);
+}
+
+.lime {
+  @include pageColor($color__lime);
+}
+
+.cyan {
+  @include pageColor($color__cyan);
+}
+
+.yellow {
+  @include pageColor($color__yellow);
+}
+
+.orange {
+  @include pageColor($color__orange);
+}
+
+.purple {
+  @include pageColor($color__purple);
+}
+
+.magenta {
+  @include pageColor($color__magenta);
+}
+
+.red {
+  @include pageColor($color__red);
+}

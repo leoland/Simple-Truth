@@ -1,0 +1,500 @@
+.home {
+	#main-navigation #city-logo {
+		//	background: url(img/simple-truth-city.png) no-repeat 0 0;
+		//	background-size: 192px 122px;
+	}
+	overflow-x: hidden;
+	#site-header #logo svg *,
+	#main-navigation #main-menu .current_page_item a {
+		transition: all 1s;
+	}
+	#site-header {}
+	#site-header,
+	#main-navigation,
+	.page-header,
+	.swiper-pagination-bullet-active {}
+	.page-header {
+		@media only screen and (max-width: 800px) {
+			
+			
+		background-image: url(img/simple-truth-city-transparent-crop.png);
+			background-size: cover;
+			background-position: bottom;
+			background-repeat: no-repeat;
+		}
+		
+
+		position: relative;
+		
+		@media only screen and (min-width: 800px) {
+			display: none;
+		}
+	}
+	.inner {
+		@media only screen and (max-width: 800px) {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+		@media only screen and (min-width: 800px) {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		margin: 0;
+		padding: 0 $outerGutter 0;
+		//background-image: url(img/simple-truth-city-transparent.png);
+	//	background-size: 80%;
+	//	background-position: -30% -15%;
+		//background-repeat: no-repeat;
+		text-align: left;
+		a {
+			color: white;
+			border-bottom-color: white;
+		}
+	}
+	main {
+		margin: -1px;
+		padding: 0;
+		//background-color: $color__green;
+	}
+	.slide {
+		@extend .clearfix;
+		position: relative;
+		margin: 0;
+	}
+	.last-slide {
+		background: $color__green url(img/pattern-02-0.5.png);
+		margin: 0 auto;
+		padding: 2em $outerGutter;
+		width: 100%-2*$outerGutter;
+		.links {
+			margin: 1.5em auto 0;
+			display: block;
+			text-align: center;
+		}
+		.last-slide-content {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		h2 {
+			font-family: gibson-bold;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 1.8em;
+			line-height: 1;
+		}
+		p {
+			text-align: center;
+			font-family: gibson-light;
+		}
+		a {
+			margin: 8px;
+		}
+	}
+	.home-slide-background-container {
+		background-size: cover;
+		background-position: center;
+		float: right;
+		width: 50%;
+	}
+	.home-slide-background-container,
+	.last-slide {
+		color: #333f48;
+		//min-height: 63vw;
+		display: table;
+		@media only screen and (min-width: 800px) {
+			height: 500px;
+		}
+	}
+	.slide-content {
+		text-align: left;
+		padding: 0 $outerGutter;
+		@media only screen and (max-width: 800px) {}
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		right: 100%;
+		@media only screen and (min-width: 800px) {
+			//	position: absolute;
+			//left: 50%;
+			//bottom: 2em;
+		}
+	}
+	.client__name {
+		font-family: gibson-semibold;
+		font-size: .875em;
+		@media only screen and (max-width: 800px) {}
+		color: white !important;
+		@media only screen and (min-width: 800px) {
+		//	font-size: 1.5em;
+		}
+	}
+	a.client__cta {
+		border-bottom: none;
+		padding-left: 0;
+		span {
+			transition: all .5s;
+			font-size: 12.8px;
+		}
+		span:not(:hover){
+			background-color: transparent !important;
+		}
+	}
+	.client__tag,
+	.client__cta {
+		color: white;
+	}
+	.client__tag {
+		font-family: gibson-light;
+		font-size: 1.5em;
+		line-height: 1.2;
+		@media only screen and (min-width: 800px) {
+			font-size: 2.2em;
+			margin-bottom: 1em;
+			//font-family: gibson-regular;
+		}
+	}
+	.client__cta {
+		@media only screen and (max-width: 800px) {
+			display: none;
+			margin: 0;
+		}
+		@media only screen and (min-width: 800px) {
+			border-radius: 5px;
+				padding: 0.8em 2em 0.6em;
+			text-transform: uppercase;
+			font-family: gibson-semibold;
+			font-size: .8em;
+			margin-top: 2em;
+		}
+	}
+}
+
+/* 
+ * Js Specific styles
+ */
+
+.js .home {
+	#site-footer {
+		@media screen and (min-width: 800px) {
+			display: none;
+		}
+	}
+	.faux-footer {
+		background-color: white;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		//height: 100px;
+		margin-left: 0;
+		z-index: 99;
+		//background-color: white;
+		background: transparent  url(img/pattern-02-0.5.png);
+		border-top: 1px solid lighten($color__bluegrey, 40%);
+		//margin-top: 3em;
+		padding: 1em $outerGutter;
+		.copyright {
+			color: lighten($color__bluegrey, 40%);
+			font-size: 0.71429em;
+			font-family: Gibson-SemiBold;
+			margin-bottom: 1em;
+			text-align: left;
+			text-transform: uppercase;
+			margin-right: 1em;
+			span {
+				display: block;
+			}
+		}
+		.footer-menu {
+			text-align: left;
+			position: relative;
+			ul {
+				float: left;
+				display: inline;
+				padding: 0 $outerGutter 0 0;
+				margin: 0 auto;
+				overflow: hidden;
+				li {
+					border-right: 1px solid lighten($color__bluegrey, 40%);
+					float: left;
+					list-style: none outside none;
+					padding: 0;
+					margin: 0;
+					line-height: 1;
+					&:last-child {
+						border-right: none;
+					}
+					&:first-of-type a {
+						padding-left: 0
+					}
+					a {
+						color: lighten($color__bluegrey, 40%);
+						display: block;
+						font-size: 0.71429em;
+						line-height: 1;
+						text-decoration: none !important;
+						text-transform: uppercase;
+						padding: 0.2em 0.5em;
+						position: relative;
+						top: 1px;
+						border-bottom: none;
+						margin-bottom: 0;
+						margin-left: 0;
+						&:hover {
+							color: $color__bluegrey;
+						}
+					}
+				}
+			}
+		}
+		.social-menu {
+			text-align: left;
+			margin: -0.25em 0 0.75em -0.3em;
+			position: relative;
+			z-index: 2;
+			display: block;
+			float: left;
+			ul {
+				display: inline-block;
+				padding: 0 $outerGutter 0 0;
+				margin: 0 auto;
+				overflow: hidden;
+				li {
+					float: left;
+					list-style: none outside none;
+					padding: 0;
+					margin: 0;
+					line-height: 1;
+					&:last-child {
+						border-right: none;
+					}
+					a {
+						color: lighten($color__bluegrey, 40%);
+						display: block;
+						font-size: 0.71429em;
+						line-height: 1;
+						text-decoration: none !important;
+						text-transform: uppercase;
+						padding: 0.3em;
+						position: relative;
+						height: 2.3em;
+						width: 2.3em;
+						margin: 0;
+						border-bottom: none;
+						svg {
+							overflow: visible;
+							#logo-shape,
+							#logo-shape * {
+								fill: lighten($color__bluegrey, 40%) !important;
+							}
+							#circle {
+								stroke: lighten($color__bluegrey, 40%) !important;
+							}
+						}
+						&:hover {
+							color: $color__bluegrey;
+							svg {
+								#logo-shape,
+								#logo-shape * {
+									fill: lighten($color__bluegrey, 0%) !important;
+								}
+								#circle {
+									stroke: lighten($color__bluegrey, 0%) !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.women-owned {
+			//position: absolute;
+			right: $outerGutter;
+			z-index: 1;
+		}
+		@media only screen and (min-width: 30em) {
+			.copyright {
+				margin-bottom: 0;
+				span {
+					display: inline;
+				}
+			}
+		}
+		@media only screen and (min-width: 50em) {
+			.copyright {
+				margin-bottom: 1;
+				span {
+					display: block;
+				}
+			}
+			.footer-menu {
+				text-align: left;
+				position: relative;
+				ul {
+					padding-left: 0;
+				}
+			}
+			.social-menu {
+			//	position: absolute;
+				//top: 2.8em;
+				clear: both;
+				margin-top: 0;
+				right: $outerGutter;
+				width: 100%;
+				ul {
+					display: block;
+					float: left;
+					padding-left: $outerGutter
+				}
+			}
+			.women-owned {
+				position: absolute;
+				right: $outerGutter/2;
+				top: 1.2em;
+				margin-right: $outerGutter;
+			}
+		}
+		@media only screen and (min-width: 52em) {
+			.copyright {
+				margin-bottom: 0;
+				span {
+					display: inline;
+				}
+			}
+		}
+	}
+	.faux-header-wrapper {
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+		@media screen and (min-width: 800px) {
+			display: block;
+		}
+	}
+	.featured-client__wrapper {
+		@extend .clearfix;
+		width: 100%;
+	}
+	.home-slide-background-container {
+		@media screen and (min-width: 800px) {
+			width: 100%;
+		}
+	}
+	.slide-content {
+		@media screen and (min-width: 800px) {
+			left: 0;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-top: 5em;
+			padding-bottom: 2.5em;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 33%, rgba(0, 0, 0, 0.5) 100%);
+		}
+	}
+	.mobile-only {
+		@media screen and (min-width: 800px) {
+			display: none
+		}
+		.home-slide-background-container {
+		margin: 0;}
+		.slide-content {
+			height: 64vw;
+		}
+		.last-slide {
+			margin: 0;
+			width: 100%;
+			
+		}
+	}
+	.slide,
+	.home-slide-background-container {
+		@media screen and (min-width: 800px) {
+			height: 100vh;
+		}
+	}
+	@media screen and (min-width: 800px) {
+		.faux-header-wrapper {
+			float: left;
+			width: 50%;
+			//margin-bottom: -100vh;
+		}
+		.faux-header {
+			transition: all 1s;
+			height: 100vh;
+			width: 100%;
+			z-index: 9999;
+			
+				font-family: gibson-light;
+			.inner {
+				height: 100vh;
+				padding: 0 2*$outerGutter;
+				background-image: url(img/simple-truth-city-transparent-crop.png);
+			background-size: contain;
+			background-position: bottom;
+			background-repeat: no-repeat;
+			}
+			p {
+				font-size: 1.3125em;
+			}
+			h1 {
+				font-size: 3em;
+				margin-top: 0 !important;
+				
+			}
+		}
+		.featured-client__wrapper {
+			max-height: 100vh;
+			background-color: transparent;
+			color: white;
+			h1 {
+				font-size: 3em;
+				margin-top: 1.25em;
+			}
+		}
+		.swiper-wrapper {}
+		//.slide:not(.last-slide) {
+		.slide {
+			//	background-color: transparent;
+			width: 50%;
+			margin-left: 50%;
+			float: right;
+			clear: both;
+			height: 100vh;
+		}
+		.swiper-container .last-slide {
+			width: 50%-$outerGutter*2;
+			padding: 0 $outerGutter;
+			.last-slide-content {
+			//	padding-bottom: 133px
+			}
+		}
+		.slide:first-child {
+			margin-top: -100vh;
+		}
+	}
+	.swiper-pagination-bullet {
+		background-color: white;
+		opacity: 1;
+			width: 12px;
+		height: 12px;
+		margin: 8px 2px;
+	}
+	.swiper-pagination-bullet-active {
+		width: 18px;
+		height: 18px;
+		margin-left: -1px ;
+		border: solid 3px;
+		background-color: transparent !important;
+	}
+}
+.no-js .client__cta {
+	border-color: white !important;
+}
+.home .swiper-container {
+	@media screen and (max-width: 800px) {
+		display: none;
+	}
+}

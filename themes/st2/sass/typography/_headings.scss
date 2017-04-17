@@ -1,0 +1,59 @@
+h1, h2, h3, h4, h5, h6 {
+	//not sure this is a great idea. Might come to change this later.
+	clear: both;
+}
+
+h1, h2, h3, h4, h5, h6, {
+  font-family: "Gibson-Regular", "helvetica neue", "helvetica", arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.375;
+  letter-spacing: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Gibson-Light";
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.75em;
+  font-family: 'Gibson-Light';
+  line-height: 1em;
+  margin: 32px 0 0.5em;
+  @media only screen and (min-width: 50em) {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: "Gibson-Light";
+  margin: 0.8em 0 0.5em;
+  @media only screen and (min-width: 50em) {
+    font-size: 1.75em;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  font-family: "Gibson-SemiBold";
+  margin: 0;
+}
+
+h1, h2, h3 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.page-header h1 {
+	color: white;
+}
+.page-header p {
+	 font-family: 'Gibson-Light';
+}
+.page-header{
+	h1, h2, p {
+		max-width: 800px;
+	}
+}

@@ -1,0 +1,70 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also) 
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin transform-origin($attribute){
+	-webkit-transform-origin: $attribute;
+	-moz-transform-origin: $attribute;
+	-ms-transform-origin: $attribute;
+	-o-transform-origin: $attribute;
+	transform-origin: $attribute;
+}
+
+@mixin transition($attribute...){
+	-webkit-transition: $attribute;
+	-moz-transition: $attribute;
+	-ms-transform-origin: $attribute;
+	-o-transition: $attribute;
+	transition: $attribute;
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin transform($transform-property){
+	-webkit-transform: $transform-property;
+	-moz-transform: $transform-property;
+	-ms-transform: $transform-property;
+	-o-transform: $transform-property;
+	transform: $transform-property;
+}
+
+@mixin box-shadow($attribute...){
+	-webkit-box-shadow: $attribute;
+	-moz-box-shadow: $attribute;
+	box-shadow: $attribute;
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

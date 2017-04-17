@@ -1,0 +1,381 @@
+/* ==========================================================================
+ * MENU 
+ * #main-menu and #contact-menu
+ * Developed to work in CSS only first, with javascript adding functionality if available
+ * $outerGutter 
+ * See: mixins+includes.sass
+ * ========================================================================== */
+
+
+/* ==========================================================================
+ * VARIABLES
+ * ========================================================================== */
+
+$openMenuWidth: 8em;
+$openSideMenuWidth: 10em;
+$closedSideMenuWidth: 90px;
+
+/* ==========================================================================
+ * MENU 
+ * ========================================================================== */
+
+header#site-header {
+	@media screen and (max-width: 800px){
+	@include box-shadow(0 1px 2px rgba(51, 63, 72, 0.25));
+	}
+	height: 50px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	a {
+		outline: 0 !important;
+	}
+	#logo {
+		position: absolute;
+		right: 0;
+		padding: 8px $outerGutter / 2 2px;
+		svg,
+		img {
+			width: 68px;
+		}
+	}
+	a.menu-link {
+		cursor: pointer !important;
+		display: block;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		padding: 7px $outerGutter / 2 0 $outerGutter;
+		text-decoration: none !important;
+		#hamburger {
+			height: 36px;
+			margin-right: 0.5em;
+			opacity: 0.5;
+			position: relative;
+			top: 0px;
+			width: 38px;
+			text-align: center;
+		}
+		span {
+			color: white;
+			font-size: 0.8em;
+			text-decoration: none !important;
+			text-transform: uppercase;
+			top: -1em;
+			position: relative;
+		}
+		&:hover {
+			svg,
+			img,
+			#hamburger {
+				opacity: 1;
+			}
+		}
+	}
+	@media only screen and (MIN-width: $menuBreakpoint) {
+		
+		background: white !important;
+		height: 100%;
+		position: fixed;
+		width: 90px;
+		&:after {
+			background: url(img/menu-shadow.png) no-repeat center left transparent;
+			background-size: 3px 100%;
+			content: " ";
+			height: 100%;
+			position: absolute;
+			left: 90px;
+			width: 3px;
+			z-index: -1;
+		}
+		#logo {
+			padding: 10px 11px;
+			top: 1em;
+			&:hover {
+				svg * {
+					fill: $color__bluegrey !important;
+				}
+			}
+		}
+		a.menu-link {
+			top: 50%;
+			height: 50px;
+			margin-top: -38px;
+			text-align: center;
+			padding: 1em 0;
+			width: 90px;
+			#hamburger {
+				margin-right: 0;
+			}
+			svg,
+			img {
+				opacity: 0.25;
+				margin: 0;
+			}
+			svg * {
+				fill: $color__bluegrey !important;
+			}
+			span {
+				display: block;
+				color: $color__bluegrey;
+				font-size: 0.7em;
+				text-align: center;
+				opacity: 0.5;
+				padding-top: 0.5em;
+			}
+			&:hover {
+				svg,
+				img,
+				span {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+#main-navigation {
+	background: white;
+	#city-logo {
+		display: none;
+	}
+	#main-menu {
+		padding: 0;
+		width: 100%;
+		ul {
+			padding: 1em 0 0.5em;
+			margin: 0;
+			li {
+				padding: 0;
+				position: relative;
+				margin: 0;
+				line-height: 1;
+				a {
+					color: $color__bluegrey;
+					display: block;
+					line-height: 1;
+					text-decoration: none;
+					text-align: right;
+				}
+			}
+		}
+	}
+	@media only screen and (MAX-width: $menuBreakpoint) {
+		padding: 5px 0;
+		#main-menu {
+			margin-top: 2.25em;
+			ul {
+				padding: 1em 0 0.5em;
+				margin: 0;
+				li {
+					padding: 0;
+					position: relative;
+					margin: 0;
+					line-height: 1;
+					a {
+						font-size: 1.25em;
+						font-family: "gibson-regular";
+						line-height: 1;
+						padding: 0.5em $outerGutter * 3 0.5em $outerGutter;
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (MIN-width: $menuBreakpoint) {
+		#city-logo {
+			background: url(img/simple-truth-city@2x.png) no-repeat 0 0; //transparent;
+			background-size: 192px 122px;
+			display: block;
+			right: -3.25em;
+			opacity: 0;
+			padding: 122px 0 0 192px;
+			position: absolute;
+			top: 1em;
+			z-index: -1;
+		}
+		#main-menu {
+			background: transparent;
+			z-index: 5;
+			ul {
+				li {
+					line-height: 1;
+					a {
+						font-size: 2em;
+						font-family: "gibson-Light";
+						line-height: 1;
+						padding: 0.15em 0 0.15em $outerGutter * 2;
+						text-transform: none;
+						&:hover {
+							background: transparent;
+							color: $color__bluegrey;
+						}
+					}
+					&:last-child {
+						// display: none
+					}
+					&.selected:before {
+						font-size: 1.25em;
+						left: 0.5em;
+						top: 0.65em;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ * Contact Menu
+ * Only displays on sidebar in Desktop view
+ * ========================================================================== */
+
+#contact-menu {
+	background: transparent;
+	bottom: 1em;
+	display: none;
+	left: 0;
+	margin: 0;
+	position: fixed;
+	width: $closedSideMenuWidth;
+	z-index: 1100;
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			a {
+				background: transparent !important;
+				border: none !important;
+				color: lighten($color__bluegrey, 30%);
+				display: block;
+				font-size: 0.75em;
+				font-family: Gibson-SemiBold;
+				line-height: 1;
+				padding: 0 0 0 1px;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none !important;
+				&:hover {
+					color: $color__bluegrey;
+				}
+			}
+		}
+	}
+	@media only screen and (MIN-width: $menuBreakpoint) {
+		display: block;
+	}
+}
+
+/* ==========================================================================
+ * JAVASCRIPT-ENABLED MENU
+ * Prepend .js to make sure it only works when javascript is loaded
+ * See colors.sass to see how .selected and hover elements work
+ * ========================================================================== */
+
+#wrapper {
+	position: relative;
+	@media only screen and (MAX-width: $menuBreakpoint) {
+		left: 0;
+		min-width: 100% !important;
+	}
+	@media only screen and (MIN-width: $menuBreakpoint) {
+		margin-top: 0;
+		margin-left: $closedSideMenuWidth;
+		left: 0;
+	}
+}
+.js {
+	#main-navigation {
+		height: 100%;
+		left: -$openMenuWidth;
+		position: fixed;
+		width: $openMenuWidth;
+		max-width: 80%;
+		top: 0;
+		z-index: 1110;
+		#main-menu {
+			ul {
+				padding: 0;
+			}
+		}
+	}
+	#main-navigation.open {
+		left: 0;
+	}
+	#contact-menu.menu-open {
+		left: $openMenuWidth;
+	}
+	#wrapper.menu-open {
+		left: $openMenuWidth;
+	}
+	#site-header.menu-open {
+		margin-left: $openMenuWidth;
+		svg,
+		#hamburger,
+		img,
+		span {
+			opacity: 1;
+		}
+	}
+	@media only screen and (min-width: $menuBreakpoint) {
+		#main-navigation {
+			left: -$openSideMenuWidth;
+			#main-menu {
+				height: 250px;
+				top: 50%;
+				position: absolute;
+				margin-top: -125px;
+			}
+		}
+		#main-navigation.open {
+			width: $openSideMenuWidth;
+			#city-logo {
+				opacity: 1;
+			}
+		}
+		#contact-menu.menu-open {
+			left: $openSideMenuWidth;
+			opacity: 0;
+		}
+		#wrapper.menu-open {
+			padding-left: $openSideMenuWidth;
+			left: 0;
+		}
+		#site-header.menu-open {
+			margin-left: $openSideMenuWidth;
+			#logo {
+				opacity: 0;
+			}
+			#hamburger,
+			img,
+			span {
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ * Hide the big logo when the height of the screen is too small
+ * ========================================================================== */
+
+@media only screen and (max-height: 40em) {
+	#city-logo {
+		opacity: 0 !important;
+	}
+}
+
+/* ==========================================================================
+ * Menu Clean up when JS is not availiable
+ * ========================================================================== */
+
+.no-js #main-navigation {
+	margin-left: $closedSideMenuWidth;
+	@extend .clearfix;
+	ul {
+		list-style: none;
+		li {
+			float: left;
+		}
+	}
+}

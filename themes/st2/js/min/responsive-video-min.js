@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var e=$("iframe[src*='https://player.vimeo.com']");e.each(function(){$(this).removeAttr("height").removeAttr("width").wrap("<div class='embed-container'></div>")})});

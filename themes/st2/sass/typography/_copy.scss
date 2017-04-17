@@ -1,0 +1,100 @@
+html {
+	font-family: "Gibson-Regular", "helvetica neue", "helvetica", arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.375;
+	letter-spacing: 0;
+}
+p {
+	margin-bottom: 1.5em;
+}
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	// testy
+	font-family: $font__pre;
+	@include font-size(0.9375);
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+code,
+kbd,
+tt,
+var {
+	font-family: $font__code;
+	@include font-size(0.9375);
+}
+abbr,
+acronym {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+mark,
+ins {
+	text-decoration: none;
+}
+big {
+	font-size: 125%;
+}
+p + h3 {
+	margin-top: 1em;
+}
+p,
+li {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 0.5em;
+}
+blockquote.big-quote {
+	border: none;
+	font-size: 1.5em;
+	font-family: "Gibson-LightIt";
+	font-weight: normal;
+	line-height: 1.375em;
+	margin: 1.25em 0 1.375em;
+	padding: 0 1em;
+}
+blockquote {
+	border-left: 0.25em solid transparentize($color__bluegrey, 0.6);
+	display: block;
+	font-size: 1em;
+	font-family: "Gibson-Italic";
+	font-weight: normal;
+	line-height: 1.375em;
+	margin: 0.8em 0 1.25em;
+	padding: 0.25em 0.75em;
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+main a,
+.page-header a, .outro a {
+	border-bottom: 1.4px dotted $color__bluegrey;
+	color: $color__bluegrey;
+	text-decoration: none !important;
+	&:hover {
+		border-bottom-style: solid;
+	}
+}
+.page-header h1 {
+	font-size: 2.2em;
+	@media only screen and (min-width: 50em) {
+		font-size: 2.75em;
+	}
+}
+.page-header h1,
+.page-header p {
+	color: white;
+}
+.page-header p {
+	font-size: 1.3125em;
+}

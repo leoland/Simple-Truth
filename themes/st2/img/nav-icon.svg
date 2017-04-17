@@ -1,0 +1,11 @@
+<svg version="1.1" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 22" style="enable-background:new 0 0 38 22;" xml:space="preserve">
+	<g class="top">
+		<rect y="0" style="fill:#FFFFFF;" width="38" height="4"/>
+	</g>
+	<g class="middle">
+		<rect y="9" style="fill:#FFFFFF;" width="38" height="4"/>
+	</g>
+	<g class="bottom">
+		<rect y="18" style="fill:#FFFFFF;" width="38" height="4"/>
+	</g>
+</svg>

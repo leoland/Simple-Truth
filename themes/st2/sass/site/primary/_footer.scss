@@ -1,0 +1,175 @@
+/* ==========================================================================
+ * Footer
+ * ========================================================================== */
+
+.site-footer {
+		z-index: 99;
+	background-color: white;
+	border-top: 1px solid lighten($color__bluegrey, 40%);
+	//margin-top: 3em;
+	padding: 1em $outerGutter;
+	position: relative;
+	.copyright {
+		color: lighten($color__bluegrey, 40%);
+		font-size: 0.71429em;
+		font-family: Gibson-SemiBold;
+		margin-bottom: 1em;
+		text-align: left;
+		text-transform: uppercase;
+		span {
+			display: block;
+		}
+	}
+	#footer-menu {
+		text-align: left;
+		position: relative;
+		ul {
+			display: inline-block;
+			padding: 0 $outerGutter 0 0;
+			margin: 0 auto;
+			overflow: hidden;
+			li {
+				border-right: 1px solid lighten($color__bluegrey, 40%);
+				float: left;
+				list-style: none outside none;
+				padding: 0;
+				margin: 0;
+				line-height: 1;
+				&:last-child {
+					border-right: none;
+				}
+				&:first-of-type a {
+					padding-left: 0
+				}
+				a {
+					color: lighten($color__bluegrey, 40%);
+					display: block;
+					font-size: 0.71429em;
+					line-height: 1;
+					text-decoration: none !important;
+					text-transform: uppercase;
+					padding: 0.2em 0.5em;
+					position: relative;
+					top: 1px;
+					&:hover {
+						color: $color__bluegrey;
+					}
+				}
+			}
+		}
+	}
+	.social-menu {
+		text-align: left;
+		margin: -0.25em 0 0.75em -0.3em;
+		position: relative;
+		z-index: 2;
+		ul {
+			display: inline-block;
+			padding: 0 $outerGutter 0 0;
+			margin: 0 auto;
+			overflow: hidden;
+			li {
+				float: left;
+				list-style: none outside none;
+				padding: 0;
+				margin: 0;
+				line-height: 1;
+				&:last-child {
+					border-right: none;
+				}
+				a {
+					color: lighten($color__bluegrey, 40%);
+					display: block;
+					font-size: 0.71429em;
+					line-height: 1;
+					text-decoration: none !important;
+					text-transform: uppercase;
+					padding: 0.3em;
+					position: relative;
+					height: 2.6em;
+					width: 2.6em;
+					svg {
+						overflow: visible;
+						#logo-shape,
+						#logo-shape * {
+							fill: lighten($color__bluegrey, 40%) !important;
+						}
+						#circle {
+							stroke: lighten($color__bluegrey, 40%) !important;
+						}
+					}
+					&:hover {
+						color: $color__bluegrey;
+						svg {
+							#logo-shape,
+							#logo-shape * {
+								fill: lighten($color__bluegrey, 0%) !important;
+							}
+							#circle {
+								stroke: lighten($color__bluegrey, 0%) !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.women-owned {
+		position: absolute;
+		right: $outerGutter;
+		top: 1em;
+		z-index: 1;
+	}
+	@media only screen and (min-width: 30em) {
+		.copyright {
+			margin-bottom: 0;
+			span {
+				display: inline;
+			}
+		}
+	}
+	@media only screen and (min-width: 50em) {
+		.copyright {
+			margin-bottom: 1;
+			span {
+				display: block;
+			}
+		}
+		#footer-menu {
+			text-align: left;
+			position: relative;
+			ul {
+				padding-left: 0;
+			}
+		}
+		#social-menu {
+			position: absolute;
+			top: 0.6em;
+			margin-top: 0;
+			right: $outerGutter;
+			width: 10em;
+			ul {
+				display: block;
+				float: right;
+				padding-left: 0;
+				position: relative;
+				right: -0.3em;
+			}
+		}
+		.women-owned {
+			margin-top: -0.1em;
+			position: absolute;
+			right: 170px;
+			top: 1em;
+			margin-right: $outerGutter;
+		}
+	}
+	@media only screen and (min-width: 52em) {
+		.copyright {
+			margin-bottom: 0;
+			span {
+				display: inline;
+			}
+		}
+	}
+}

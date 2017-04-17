@@ -1,0 +1,150 @@
+/* ==========================================================================
+ * MAIN
+ * ========================================================================== */
+
+
+/* ==========================================================================
+ * Site Header
+ * ========================================================================== */
+
+#site-header {
+	position: relative;
+}
+
+/* ==========================================================================
+ * Page Header
+ * ========================================================================== */
+
+.page-header {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: white;
+	}
+	h1 {
+		//font-size: 2.5em
+		margin-top: 1.25em;
+		@media screen and (min-width: 60em) {
+			margin: 1.325em 0 1em;
+		}
+	}
+	h2 {
+		font-size: 1.3125em;
+	}
+}
+
+/* ==========================================================================
+ * Buttons
+ * ========================================================================== */
+
+button,
+input[type=submit],
+a.button {
+	@include border-radius(4px);
+	background: transparent;
+	border: 3px solid $color__bluegrey;
+	color: $color__bluegrey;
+	display: inline-block;
+	font-family: Gibson-SemiBold;
+	font-size: 0.8em;
+	line-height: 1;
+	padding: 0.8em 2em 0.6em;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	margin: 0.5em auto;
+	outline: 0 !important;
+	&:hover,
+	&:focus {
+		background: $color__bluegrey;
+		color: white;
+	}
+}
+
+/* ==========================================================================
+ * Helper classes
+ * ========================================================================== */
+
+.ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	*text-indent: -9999px;
+	&:before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 150%;
+	}
+}
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	&.focusable {
+		&:active,
+		&:focus {
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+	}
+}
+.invisible {
+	visibility: hidden;
+}
+.clearfix {
+	&:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+		*zoom: 1;
+	}
+}
+.outro {
+	@extend .clearfix;
+	color: white;
+	font-size: 1.3125em;
+	text-align: center;
+	padding: 1.8em;
+	font-family: Gibson-light;
+	p {
+		margin: 0;
+	}
+	a {
+		color: white;
+		border-bottom-color: white;
+		font-family: Gibson-semibold;
+		@media only screen and (max-width: 800px) {
+		//	border-bottom: none;
+		}
+	}	@media only screen and (min-width: 800px) {
+		padding: 3.2em;
+	}
+}
+
+#primary {
+	width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
